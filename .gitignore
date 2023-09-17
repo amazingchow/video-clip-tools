@@ -139,3 +139,6 @@ dmypy.json
 .srt_files/*
 .texted_video_tmp/*
 .blurred_video_tmp/*
+.cover_tmp/*
+*.mp3
+*.mp4
