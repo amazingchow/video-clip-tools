@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 import argparse
-import cv2
-import os
 import glob
-import tqdm
-
-from colorama import Fore, Style
-from moviepy.editor import CompositeVideoClip
-from moviepy.editor import TextClip
-from moviepy.editor import VideoFileClip
+import os
 from typing import Tuple
 
-video_dir = "./.video_tmp/"
-cover_dir = "./.cover_tmp/"
-blurred_video_dir = "./.blurred_video_tmp/"
-texted_video_dir = "./.texted_video_tmp/"
+import cv2
+import tqdm
+from colorama import Fore, Style
+from moviepy.editor import CompositeVideoClip, TextClip, VideoFileClip
+
+video_dir = "./data/.video_tmp/"
+cover_dir = "./data/.cover_tmp/"
+blurred_video_dir = "./data/.blurred_video_tmp/"
+texted_video_dir = "./data/.texted_video_tmp/"
 
 
 def save_cover_from_video(video_fn: str):

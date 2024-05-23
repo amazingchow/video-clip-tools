@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-import os
 import glob
-import stable_whisper
+import os
 import time
-import tqdm
 
+import stable_whisper
+import tqdm
 from moviepy.editor import AudioFileClip
 
-video_dir = "./.video_tmp/"
-audio_dir = "./.audio_tmp/"
+video_dir = "./data/.video_tmp/"
+audio_dir = "./data/.audio_tmp/"
 
 
 def extract_audio_from_video(video_fn: str):

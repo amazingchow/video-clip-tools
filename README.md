@@ -2,9 +2,7 @@
 ### Install the Dependencies.
 
 ```shell
-pip install -r requirements.txt
+make init
 ```
 
-### Install the ImageMagick.
-
-https://imagemagick.org/script/download.php
+Install the ImageMagick: https://imagemagick.org/script/download.php

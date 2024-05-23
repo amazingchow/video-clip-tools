@@ -132,13 +132,9 @@ dmypy.json
 # Extra
 .idea
 .vscode
-
-.video_tmp/*
-.audio_tmp/*
-.whisper_model/*
-.srt_files/*
-.texted_video_tmp/*
-.blurred_video_tmp/*
-.cover_tmp/*
+.env.local
+.env.secret
+.env.shared
+.data/*
 *.mp3
 *.mp4
