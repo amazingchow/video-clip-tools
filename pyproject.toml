@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "video-clip-tools"
+version = "0.1.0"
+description = ""
+authors = ["amazingchow <jianzhou42@163.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+stable-ts = "^2.17.2"
+moviepy = "^1.0.3"
+colorama = "^0.4.6"
+opencv-python = "^4.9.0.80"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

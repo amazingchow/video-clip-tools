@@ -1,9 +1,8 @@
 include .env.local .env.secret .env.shared
 export
 
-VERSION  := v1.0.0
+VERSION  := v0.1.0
 GIT_HASH := $(shell git rev-parse --short HEAD)
-SERVICE  := video-zimu-translator
 SRC      := $(shell find . -type f -name '*.py' -not -path "./venv/*")
 CURR_DIR := $(shell pwd)
 
@@ -13,18 +12,14 @@ help: ### Display this help screen.
 
 .PHONY: init
 init: ### Initialize the project.
-	@pip install -r requirements.txt
-	@mkdir -p ./data/.audio_tmp \
-		./data/.blurred_video_tmp \
-		./data/.cover_tmp \
-		./data/.srt_files \
-		./data/.texted_video_tmp \
-		./data/.video_tmp \
-		./data/.whisper_model
-
-.PHONY: deps
-deps: ### Update the project dependencies.
-	@pip freeze > requirements.txt
+	@mkdir -p ${CURR_DIR}/.data/.audio_tmp \
+		${CURR_DIR}/.data/.blurred_video_tmp \
+		${CURR_DIR}/.data/.cover_tmp \
+		${CURR_DIR}/.data/.srt_files \
+		${CURR_DIR}/.data/.texted_video_tmp \
+		${CURR_DIR}/.data/.video_tmp \
+		${CURR_DIR}/.data/.whisper_model
+	@poetry install
 
 .PHONY: lint
 lint: ### Improve your code style. (isort, pyflakes, pycodestyle)
